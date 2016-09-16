@@ -12,4 +12,11 @@ function chain(from, to){
 
 chain("#i_wer", "#g_wasGrob");
 chain("#i_wasGrob", "#g_wasGenau");
+chain("#i_wasGenau", "#g_wann");
 
+
+$('#i_wann').datetimepicker(
+		{
+            format: 'MMMM Do YYYY'
+        }		
+);
