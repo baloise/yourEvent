@@ -5,6 +5,11 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
+.container-fluid {
+	padding-left: 0px;
+	padding-right: 0px;	
+}
 /*
 blau : #008ac9
 success : #14fc84
