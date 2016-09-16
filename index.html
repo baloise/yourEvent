@@ -90,7 +90,7 @@
 	</nav>
 
 	<div class="container-fluid">
-<!-- 
+		<!-- 
 		<div class="starter-template">
 			<h1>YourEvent</h1>
 			<p class="lead">
@@ -130,7 +130,7 @@
 
 
 			<div class="form-group" id="g_wasGenau" style="display: none;">
-				<label for="i_weAre">Dabei geht es um</label> <select
+				<label for="i_wasGenau">Dabei geht es um</label> <select
 					class="form-control" id="i_wasGenau">
 					<option>...</option>
 					<option>ein Konzert</option>
@@ -144,8 +144,16 @@
 			</div>
 
 			<div class="form-group" id="g_wann" style="display: none;">
-				<label>Die Veranstaltung steigt am</label>
-				<div class='input-group date' id='i_wann'>
+				<label for="i_wann">Die Veranstaltung steigt</label> <select
+					class="form-control" id="i_wann">
+					<option>...</option>
+					<option>am</option>
+					<option>vom</option>
+				</select>
+			</div>
+
+			<div class="form-group" id="g_von" style="display: none;">
+				<div class='input-group date' id='i_von'>
 					<input type='text' class="form-control" data-future="1" /> <span
 						class="input-group-addon"> <span
 						class="glyphicon glyphicon-calendar"></span>
@@ -153,20 +161,11 @@
 				</div>
 				<div class="help-block with-errors"></div>
 			</div>
-			
-			<div class="form-group" id="g_dauer" style="display: none;">
-				<label for="i_dauer">und dauert</label> <select
-					class="form-control" id="i_dauer">
-					<option>...</option>
-					<option>bis zu 3 Stunden</option>
-					<option>mehr als 3 Stunden</option>
-					<option>bis zum</option>
-				</select>
-			</div>
 
-		<div class="form-group" id="g_bis" style="display: none;">
+			<div class="form-group" id="g_bis" style="display: none;">
+				<label for="i_bis">bis</label>
 				<div class='input-group date' id='i_bis'>
-					<input type='text' class="form-control" /> <span
+					<input type='text' class="form-control" data-duration="10" /> <span
 						class="input-group-addon"> <span
 						class="glyphicon glyphicon-calendar"></span>
 					</span>
@@ -174,7 +173,20 @@
 				<div class="help-block with-errors"></div>
 			</div>
 
-			
+			<div class="form-group" id="g_teilnehmer" style="display: none;">
+				<label for="i_teilnehmer">Wir erwarten</label> <select
+					class="form-control" id="i_teilnehmer">
+					<option>...</option>
+					<option>bis zu 20</option>
+					<option>20 bis 50</option>
+					<option>50 bis 100</option>
+					<option>100 bis 500</option>
+					<option>mehr als 500</option>
+				</select>
+				<label id="proTag">Personen.</label>
+			</div>
+
+
 			<!-- 
   <button type="submit" class="btn btn-primary">Submit</button>
    -->
