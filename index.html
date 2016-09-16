@@ -90,7 +90,7 @@
 	</nav>
 
 	<div class="container-fluid">
-
+<!-- 
 		<div class="starter-template">
 			<h1>YourEvent</h1>
 			<p class="lead">
@@ -98,11 +98,12 @@
 					src="img/logo_basler_versicherungen_d.jpg">
 			</p>
 		</div>
+ -->
 
-		<form id="eventForm">
+		<form id="eventForm" name="eventForm">
 
 			<div class="form-group" id="g_wer">
-				<label for="i_weAre">Hallo, wir sind</label> <select
+				<label for="i_wer">Hallo, wir sind</label> <select
 					class="form-control" id="i_wer">
 					<option>...</option>
 					<option>ein Sportverein</option>
@@ -116,7 +117,7 @@
 			</div>
 
 			<div class="form-group" id="g_wasGrob" style="display: none;">
-				<label for="i_weAre">und wir wollen</label> <select
+				<label for="i_wasGrob">und wir wollen</label> <select
 					class="form-control" id="i_wasGrob">
 					<option>...</option>
 					<option>eine Veranstaltung im Freien</option>
@@ -146,6 +147,26 @@
 				<label>Die Veranstaltung steigt am</label>
 				<div class='input-group date' id='i_wann'>
 					<input type='text' class="form-control" data-future="1" /> <span
+						class="input-group-addon"> <span
+						class="glyphicon glyphicon-calendar"></span>
+					</span>
+				</div>
+				<div class="help-block with-errors"></div>
+			</div>
+			
+			<div class="form-group" id="g_dauer" style="display: none;">
+				<label for="i_dauer">und dauert</label> <select
+					class="form-control" id="i_dauer">
+					<option>...</option>
+					<option>bis zu 3 Stunden</option>
+					<option>mehr als 3 Stunden</option>
+					<option>bis zum</option>
+				</select>
+			</div>
+
+		<div class="form-group" id="g_bis" style="display: none;">
+				<div class='input-group date' id='i_bis'>
+					<input type='text' class="form-control" /> <span
 						class="input-group-addon"> <span
 						class="glyphicon glyphicon-calendar"></span>
 					</span>
