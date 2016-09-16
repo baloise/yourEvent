@@ -9,19 +9,32 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <!-- ############### ICON ########### -->
-<link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/icon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/icon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="57x57"
+	href="/icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60"
+	href="/icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="/icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76"
+	href="/icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="/icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120"
+	href="/icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144"
+	href="/icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152"
+	href="/icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180"
+	href="/icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"
+	href="/icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32"
+	href="/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96"
+	href="/icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16"
+	href="/icon/favicon-16x16.png">
 <link rel="manifest" href="/icon/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/icon/ms-icon-144x144.png">
@@ -52,7 +65,8 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="#" class="navbar-left"><img src="icon/android-icon-36x36.png"></a>
+				<a href="#" class="navbar-left"><img
+					src="icon/android-icon-36x36.png"></a>
 				<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
 					aria-controls="navbar">
@@ -85,7 +99,7 @@
 			</p>
 		</div>
 
-		<form>
+		<form id="eventForm">
 
 			<div class="form-group" id="g_wer">
 				<label for="i_weAre">Hallo, wir sind</label> <select
@@ -128,18 +142,18 @@
 				</select>
 			</div>
 
-            <div class="form-group" id="g_wann" style="display: none;">
-            	<label>Die Veranstaltung steigt am</label>
-                <div class='input-group date' id='i_wann'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-        
+			<div class="form-group" id="g_wann" style="display: none;">
+				<label>Die Veranstaltung steigt am</label>
+				<div class='input-group date' id='i_wann'>
+					<input type='text' class="form-control" data-future="1" /> <span
+						class="input-group-addon"> <span
+						class="glyphicon glyphicon-calendar"></span>
+					</span>
+				</div>
+				<div class="help-block with-errors"></div>
+			</div>
 
+			
 			<!-- 
   <button type="submit" class="btn btn-primary">Submit</button>
    -->
@@ -157,7 +171,8 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/moment.js"></script>
 	<script src="js/bootstrap-datetimejs.js"></script>
+	<script src="js/formvalidator.js"></script>
 	<script src="js/script.js"></script>
-	
+
 </body>
 </html>
