@@ -55,13 +55,15 @@ var i_bis = $('#i_bis').datetimepicker(
 );
 
 $("#i_von").on("dp.change", function(e) {
+	berechnen()
 	if($("#i_wann option:selected").text() == "am") {
 		$("#g_teilnehmer").fadeIn( fadeDuration );
 	}
 });
 
 $("#i_bis").on("dp.change", function(e) {
-		$("#g_teilnehmer").fadeIn( fadeDuration );
+	berechnen()	
+	$("#g_teilnehmer").fadeIn( fadeDuration );
 });
 
 $("#i_teilnehmer").change(function() {
@@ -97,10 +99,63 @@ $("#i_inventar").change(function() {
 	}
 });
 
+
+// ABSCHLUSS
+
+$( "#buy" ).click(function() {
+	  $("#footerText").html("Cool. Unser Vertrag kommt per Email!")
+});
+
 // LIB und INIT
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover();
 });
+
+function berechnen(){
+	if(kannRechnen()) {
+		var p = 100;
+		if(essen()) {
+			p = p+ 5;
+		}
+		if(tribuene()) {
+			p = p + 5;
+		}
+		if(imFreien() && zelt()) {
+			p= p+5;
+		}	
+		p = p * dauer();
+		//p = ln(1+anzahlPersonen1bis4) *p
+		$("#praemie").html(p);
+		$("#footer").fadeIn( fadeDuration );
+	} else {
+		$("#footer").fadeOut( fadeDuration );
+	}
+}
+
+function kannRechnen(){
+	return $("#i_haftpflicht").is(":checked");
+}
+
+$(".berechnen").change(berechnen);
+
+function imFreien(){
+	return  $("#i_wasGrob option:selected").text() != "in einem Gebäude";
+}
+function essen(){
+	return  $("#i_essen").is(":checked");
+}
+function tribuene(){
+	return  $("#i_tribuene").is(":checked");
+}
+function zelt(){
+	return  $("#i_zelt").is(":checked");
+}
+function dauer(){
+  	var bis = i_bis.data("DateTimePicker").date();
+  	if(bis == null) return 1;
+  	var von = i_von.data("DateTimePicker").date();
+  	return bis.diff(von,'days');
+}
 
 $('#eventForm').validator(
 {

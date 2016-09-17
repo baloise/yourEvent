@@ -68,6 +68,7 @@
 			<div class="navbar-header">
 				<a href="#" class="navbar-left"><img
 					src="icon/android-icon-48x48.png"></a>
+					<!-- 
 				<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
 					aria-controls="navbar">
@@ -75,6 +76,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
+					 -->
 				<a class="navbar-brand" href="#">
 				<span style="color:#F0145A;float:left; display: inline;">pr</span>
 				<span style="color:#004B92;float:left; display: inline;">Event</span>
@@ -107,7 +109,7 @@
 		<form id="eventForm" name="eventForm">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Hallo, wir sind</h3>
+					<h3 class="panel-title">Hallo Baloise, wir sind</h3>
 				</div>
 				<div class="panel-body">
 
@@ -205,17 +207,18 @@
 				style="display: none;">
 				<div class="panel-heading">
 					<h3 class="panel-title">
-						<input type="checkbox" id="i_haftpflicht" value=""> Wir
+						<input type="checkbox" id="i_haftpflicht" value="" class="berechnen"> Wir
 						brauchen eine Haftpflichtversicherung
 					</h3>
 
 				</div>
 				<div class="panel-body" id="pb_haftpflicht" style="display: none;">
-					<input type="checkbox" id="i_essen" value="" checked="checked"> <label
-						for="i_essen">Wir bieten Essen oder Getränke an</label><br /> <input
-						type="checkbox" id="i_essen" value="" checked="checked"> <label
+					<input type="checkbox" id="i_essen" value="" checked="checked" class="berechnen"> <label
+						for="i_essen">Wir bieten Essen oder Getränke an</label><br /> 
+						<input
+						type="checkbox" id="i_tribuene" value="" checked="checked" class="berechnen"> <label
 						for="i_tribuene">Wir haben eine Zuschauertribüne</label><br /> 
-						<input type="checkbox" id="i_essen" value="" checked="checked">
+						<input type="checkbox" id="i_zelt" value="" checked="checked" class="berechnen">
 					<label for="i_zelt">Wir haben ein Festzelt</label>
 
 				</div>
@@ -234,7 +237,7 @@
 
 				</div>
 				<div class="panel-body" id="pb_inventar" style="display: none;">
-					gugus</div>
+					check back next monday ;-)</div>
 			</div>
 
 		</form>
@@ -243,10 +246,12 @@
 	</div>
 	<!-- /.container -->
 
-	<footer class="footer" style="display: none;">
-		<div class="container">
-			<p>Place sticky footer content here.</p>
-		</div>
+	<footer class="footer" style="display: none;" id="footer">
+				<div class="panel-heading">
+					<h3 class="panel-title" id="footerText">Prima. Wir wollen unser Event versichern. Unsere Prämie beträgt 
+					<span id="praemie">0</span> CHF. Die <a href="Baloise prEvent.pdf">Vertragsbedingungen</a> sind für uns OK. <button type="button" class="btn btn-default" id="buy">Kaufen mit <img src="img/papyal_20.png"/></button>
+					</h3>
+				</div>
 	</footer>
 
 
