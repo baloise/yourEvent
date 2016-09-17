@@ -1,0 +1,374 @@
+
+*,:after,:before{
+    position: relative!important;
+    float: none!important;
+	background-color:transparent!important;
+    background-repeat: no-repeat!important;
+	background-image:none!important;
+	clear:none!important;
+	position:relative!important;
+	overflow:visible!important;
+	height:auto!important;
+	text-shadow: none !important;
+	filter:none !important;
+	-ms-filter: none !important;
+}
+
+script {
+    display: none!important;
+}
+
+.print-img {
+	display: block!important;
+}
+
+a, a:visited { text-decoration: underline; }
+a[href]:after { content: " (" attr(href) ")"; display: none; }
+abbr[title]:after { content: " (" attr(title) ")"; display: none; }
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+tr, img { page-break-inside: avoid; }
+img { max-width: 100% !important; }
+p, h2, h3 { orphans: 3; widows: 3; }
+h2, h3{ page-break-after: avoid; }
+
+body{
+    color:#000;
+    font-size:12px;
+    line-height: 1.4em;
+    margin:0px 50px 0px 50px;
+    margin:0;
+}
+
+#top {
+    position: relative!important;
+    border-bottom:0px solid #0060A4!important;
+    background-image: none!important;
+    page-break-after: avoid!important;
+    z-index: auto!important;
+    top: auto!important;
+}
+
+#top div.inner, .inner, #content div.inner, .footerinner, .promo {
+    display: block!important; /* to avoid page-break */
+}
+
+#logo,
+#logo a,
+#logo img{
+    position: relative!important;
+    max-height: none!important;
+    width: auto!important;
+    display: block!important;
+    page-break-before: avoid;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    float: none!important;
+}
+div#logo.top-2-logo {
+    float: right!important;
+}
+/* Top sub-nodes */
+#bewertungen,
+.ekomi-widget,
+#nav,
+#nav-trigger,
+.function,
+#navMobileMarker,
+#navDesktopMarker {
+	display: none!important;
+}
+
+#top div[style*="clear"] {
+    display: none!important;
+}
+
+#content, #blocktitle {
+    position: relative!important;
+    clear: both!important;
+}
+
+#text {
+  width: auto;
+}
+
+#content h1:empty,  #content h2:empty,  #content h3:empty,  #content div:empty,  #content span:empty {
+	display: none!important;
+}
+
+html #nav-trigger {
+    display: none!important;
+}
+
+#logo {
+    max-width: 33%;
+}
+#logo img {
+    max-width: 100%;
+}
+#contact {
+    display: none!important;
+}
+#LiveHelpEmbedded {
+    display: none!important;
+}
+.top-2-sentinel {
+    display: none!important;
+    position: fixed!important;
+}
+/* hide functional elements*/
+.function, #bewertungen, #nav, #service, #blocknav, #footer{
+    display: none!important;
+}
+
+/* set color */
+h1, h2, h3,  b, .title, #footerprint{
+    color:#0060A4 !important;
+}
+
+h3 {
+    color:#000 !important;
+}
+a {
+    color:#000 !important;
+}
+.button a, a.button {
+    color:#fff !important;
+}
+a.link2 {
+    color:#FF0066 !important;
+    padding-left: 0!important;
+    background-image: none!important;
+}
+/* open elements */
+ul{
+    list-style:disc !important;
+    list-style-position:outside !important;
+    padding:0px 0px 0px 20px !important;
+    margin:0px 0px 15px 0px !important;
+}
+ul ul{
+    margin:0px 0px 0px 0px !important;  
+}
+li{
+    padding-left:0px !important;
+    margin:auto !important;
+    background:none !important;
+}
+
+.klapi h3{
+    padding:10px 0px 10px 0px;
+    background:none;  
+    padding-left:0 !important;
+}
+
+.klapi h3:hover {
+    background: none;
+    cursor: default;
+}
+
+.klapi{
+    border-top:0px solid #0060A4;
+    border-bottom:0px solid #0060A4;
+    margin:0px;
+    padding:0px;
+}
+.klapi div{
+    display:block !important;
+    background:none;
+    padding:0px 0px 0px 0px;
+}
+
+.klapi > div{
+    padding-top: 1em!important;
+}
+
+/*hide Overlay ie9*/
+#fancybox-wrap, #fancybox-overlay {
+    display: none !important;
+}
+
+/* hide big buttons*/
+#blocktitle {
+ margin-bottom: 0!important;   
+}
+
+#blocktitle .binner{
+    padding: 20px 0!important;
+}
+
+#blocktitle .binner img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 70px;
+    vertical-align: top;
+    float: left!important; /* reset overwrite */
+    display: block!important;
+}
+#blocktitle h1 {
+    padding-top: 0.25em!important;
+}
+#blocktitle a{
+    display:none;
+}
+
+/* make titles */
+h1, h3, h3{
+    font-weight:bold;
+}
+h2{
+    padding-left:0px !important;
+}
+
+
+.c-box h2, .c-box-c{
+    border-bottom:3px solid #0060A4;
+}
+.c-box-c{
+    border-bottom:0px dotted #0060A4;
+    padding: 1em 0!important;
+    text-align: justify;
+    display:block!important;
+}
+.c-table{
+    border-bottom:0px dotted #000 !important;
+}
+.c-table td {
+    border-right: 0px solid #CCDDEE!important;
+    border-left: 0px solid #CCDDEE!important;
+    margin-right: 10px!important;
+}
+
+.c-table td.title{
+    border-top:3px solid #0060A4!important;
+    border-bottom:3px solid #0060A4!important;
+    font-weight:bold;
+    padding: 0.75em 1em!important;
+}
+
+td.add {
+    display: none!important;
+}
+
+.bg{
+    background: transparent!important;
+}
+.c-box-c p{
+    padding:10px 0px 0px 0px;  
+}
+.in{
+    padding:0px 0px 10px 0px !important;
+    margin:0px !important;
+}
+td{
+    padding-left:0px !important;
+}
+.check{
+    color:#999;
+    background:none;
+    padding-left:0px !important;
+}
+.check.on{
+    color:#000 !important;
+    background-image: none!important;
+    padding: 0.75em 1em!important;
+}
+.check.off{
+    display:none!important;
+}
+
+td.add{
+    display:none;
+}
+.c-table{
+    border-bottom:1px solid #0060A4;
+}
+
+/* options */
+
+.option-c{
+    display:block;  
+}
+
+/* News Page */
+div#paging {
+    clear: both!important;
+    padding: 1em 0;
+}
+div#paging ul li {
+    display: inline-block!important;
+}
+#bloglist {
+    clear: both!important;
+    width: 100%!important;
+}
+
+/* footer print*/
+#footer {
+    background-color: transparent!important;    
+}
+
+#footerprint{
+    background:#fff;
+    padding-bottom:40px;
+    padding-top:40px;
+    text-align: center;
+}
+
+.hidden{
+    display:block;
+}
+
+.video a {
+    display: none !important;
+}
+
+.c-table td.video {
+    background: none;
+}
+.box.on {
+    background-color: #EAF1F6!important;
+}
+
+.box:hover {
+    background: none !important;
+    cursor: default !important;
+}
+
+/*Entfernt die a:hover Farbe im Printlayout und stellt den default Cursor her*/
+
+#print-view a:hover {
+    color: #000 !important;
+    cursor: default !important;
+}
+
+#print-view .button a:hover, #print-view a.button:hover {
+    color: #fff !important;
+}
+
+#print-view a:hover.link2 {
+    color:#FF0066 !important;
+}
+/*print update for normal forms*/
+.pagetitle {
+    text-align: left;
+    background-image: none!important;
+}
+
+.drucken-img {
+    display: block !important;
+    left: 0;
+    position: relative;
+    top: -0.25em;
+    float:left !important; /* reset overwrite */
+}
+
+.actions {
+    display:none;
+}
+
+.c-box {
+    width: 100% !important;
+}

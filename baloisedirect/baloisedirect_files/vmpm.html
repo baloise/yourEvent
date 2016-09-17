@@ -1,0 +1,10 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function receiveMessage(a){sendHtmlContent(a.data)}function handleEvent(b,a,c){if(b.addEventListener){b.addEventListener(a,c,false)}else{if(b.attachEvent){b.attachEvent("on"+a,c)}}}handleEvent(window,"message",receiveMessage);window.parent.postMessage("hello","*");function sendHtmlContent(d){var g=String.fromCharCode(38)+"receive=";var c=d.indexOf(g);if(c!=-1){var b=d.substr(c+g.length);var h=d.substr(0,c);var a=null;try{a=new XMLHttpRequest()}catch(f){try{a=new ActiveXObject("Microsoft.XMLHTTP")}catch(f){}}if(a){a.open("POST",b);a.setRequestHeader("Content-type","application/x-www-form-urlencoded");a.send(h)}}};	</script>
+
+</body></html>
