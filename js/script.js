@@ -140,12 +140,14 @@ function berechnen(){
 			h= h+5;
 		}	
 		h = h * dauer();
-		//h = ln(1+anzahlPersonen1bis4) *h
 		p = p+ h;
 	}
 	if($("#i_ausfall").is(":checked")) {
 		p = p + 200;
 	}
+	
+	p = Math.round(Math.log(1+$("#i_teilnehmer")[0].selectedIndex) *p);
+
 	if(p > 0) {	
 		$("#praemie").html(p);
 		$("#footer").fadeIn( fadeDuration );
@@ -153,6 +155,7 @@ function berechnen(){
 		$("#footer").fadeOut( fadeDuration );
 	}
 }
+
 
 
 $(".berechnen").change(berechnen);
