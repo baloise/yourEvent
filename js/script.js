@@ -71,9 +71,11 @@ $("#i_teilnehmer").change(function() {
 	if (val == '...') {
 		$("#p_haftpflicht").fadeOut( fadeDuration );
 		$("#p_inventar").fadeOut( fadeDuration );
+		$("#p_ausfall").fadeOut( fadeDuration );
 	} else {
 		$("#p_haftpflicht").fadeIn( fadeDuration );
 		$("#p_inventar").fadeIn( fadeDuration );
+		$("#p_ausfall").fadeIn( fadeDuration );
 	}
 });
 
@@ -112,19 +114,39 @@ $(document).ready(function(){
 });
 
 function berechnen(){
-	if(kannRechnen()) {
-		var p = 100;
+	var p = 0;
+	if($("#i_inventar").is(":checked")) {
+		console.log("inventar")
+		var i = 0;
+		i = 80;
+		if($("#i_technischeDefekte").is(":checked")) {
+			i = i+ 5;
+		}
+		i = i * dauer();
+		if($("#i_transport").is(":checked")) {
+			i = i + 20;
+		}
+		p = p +i;
+	}
+	if($("#i_haftpflicht").is(":checked")) {
+		var h = 100;
 		if(essen()) {
-			p = p+ 5;
+			h = h+ 5;
 		}
 		if(tribuene()) {
-			p = p + 5;
+			h = h + 5;
 		}
 		if(imFreien() && zelt()) {
-			p= p+5;
+			h= h+5;
 		}	
-		p = p * dauer();
-		//p = ln(1+anzahlPersonen1bis4) *p
+		h = h * dauer();
+		//h = ln(1+anzahlPersonen1bis4) *h
+		p = p+ h;
+	}
+	if($("#i_ausfall").is(":checked")) {
+		p = p + 200;
+	}
+	if(p > 0) {	
 		$("#praemie").html(p);
 		$("#footer").fadeIn( fadeDuration );
 	} else {
@@ -132,9 +154,6 @@ function berechnen(){
 	}
 }
 
-function kannRechnen(){
-	return $("#i_haftpflicht").is(":checked");
-}
 
 $(".berechnen").change(berechnen);
 

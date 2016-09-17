@@ -228,7 +228,7 @@
 				style="display: none;">
 				<div class="panel-heading">
 					<h3 class="panel-title">
-						<input type="checkbox" id="i_inventar" value=""> Wir
+						<input type="checkbox" id="i_inventar" value="" class="berechnen"> Wir
 						wollen unser Inventar versichern <a href="#" data-toggle="popover"
 							title="Inventar ist z.B."
 							data-content="ein Festzelt, Bänke, Tische, Stühle, Geschirr, Küchengeräte, Beleuchtung oder eine Musikanlage."><span
@@ -237,8 +237,26 @@
 
 				</div>
 				<div class="panel-body" id="pb_inventar" style="display: none;">
+					<input type="checkbox" id="i_technischeDefekte" value="" checked="checked" class="berechnen"> <label
+						for="i_technischeDefekte">auch gegen technische Defekte</label><br />
+					<input type="checkbox" id="i_transport" value="" checked="checked" class="berechnen"> <label
+						for="i_transport">auch während des Transports</label><br />
+					
+					</div>
+			</div>
+			
+			<div class="panel panel-default" id="p_ausfall"
+				style="display: none;">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<input type="checkbox" id="i_ausfall" value="" class="berechnen"> Wir wollen die Kosten für unser Event gegen Ausfall versichern
+					</h3>
+
+				</div>
+				<div class="panel-body" id="pb_ausfall" style="display: none;">
 					check back next monday ;-)</div>
 			</div>
+			
 
 		</form>
 
