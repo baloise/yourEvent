@@ -10,6 +10,26 @@ body {
 	padding-left: 0px;
 	padding-right: 0px;	
 }
+
+nav.navbar.navbar-inverse.navbar-fixed-top {
+	background-color: white;	
+}
+html body nav.navbar.navbar-inverse.navbar-fixed-top div.container div.navbar-header a.navbar-brand {
+	color: black;
+	padding-left: 50px;
+}
+html body nav.navbar.navbar-inverse.navbar-fixed-top {
+	border-bottom-color: #CCDDEE;
+}
+div.panel.panel-default div.panel-heading {
+	background-color: #EAF1F6;
+}
+body,.panel-title {
+	color: #004B92;
+}
+ 
+
+
 /*
 blau : #008ac9
 success : #14fc84

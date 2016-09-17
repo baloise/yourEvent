@@ -11,9 +11,9 @@ function chain(from, to){
 	});
 }
 
-chain("#i_wer", "#g_wasGrob");
-chain("#i_wasGrob", "#g_wasGenau");
-chain("#i_wasGenau", "#g_wann");
+chain("#i_wer", "#g_wasGenau");
+chain("#i_wasGenau", "#g_wasGrob");
+chain("#i_wasGrob", "#g_wann");
 
 $("#i_wann").change(function() {
 	var val = $("#i_wann option:selected").text();
@@ -64,6 +64,43 @@ $("#i_bis").on("dp.change", function(e) {
 		$("#g_teilnehmer").fadeIn( fadeDuration );
 });
 
+$("#i_teilnehmer").change(function() {
+	var val = $("#i_teilnehmer option:selected").text();
+	if (val == '...') {
+		$("#p_haftpflicht").fadeOut( fadeDuration );
+		$("#p_inventar").fadeOut( fadeDuration );
+	} else {
+		$("#p_haftpflicht").fadeIn( fadeDuration );
+		$("#p_inventar").fadeIn( fadeDuration );
+	}
+});
+
+
+//HAFTPLICHT
+
+$("#i_haftpflicht").change(function() {
+	if($("#i_haftpflicht").is(":checked")){
+		$("#pb_haftpflicht").fadeIn( fadeDuration );
+	} else {
+		$("#pb_haftpflicht").fadeOut( fadeDuration );
+	}
+});
+
+
+//INVENTAR
+
+$("#i_inventar").change(function() {
+	if($("#i_inventar").is(":checked")){
+		$("#pb_inventar").fadeIn( fadeDuration );
+	} else {
+		$("#pb_inventar").fadeOut( fadeDuration );
+	}
+});
+
+// LIB und INIT
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+});
 
 $('#eventForm').validator(
 {

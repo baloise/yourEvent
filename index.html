@@ -10,34 +10,34 @@
 
 <!-- ############### ICON ########### -->
 <link rel="apple-touch-icon" sizes="57x57"
-	href="/icon/apple-icon-57x57.png">
+	href="icon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60"
-	href="/icon/apple-icon-60x60.png">
+	href="icon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72"
-	href="/icon/apple-icon-72x72.png">
+	href="icon/apple-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="76x76"
-	href="/icon/apple-icon-76x76.png">
+	href="icon/apple-icon-76x76.png">
 <link rel="apple-touch-icon" sizes="114x114"
-	href="/icon/apple-icon-114x114.png">
+	href="icon/apple-icon-114x114.png">
 <link rel="apple-touch-icon" sizes="120x120"
-	href="/icon/apple-icon-120x120.png">
+	href="icon/apple-icon-120x120.png">
 <link rel="apple-touch-icon" sizes="144x144"
-	href="/icon/apple-icon-144x144.png">
+	href="icon/apple-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="152x152"
-	href="/icon/apple-icon-152x152.png">
+	href="icon/apple-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="180x180"
-	href="/icon/apple-icon-180x180.png">
+	href="icon/apple-icon-180x180.png">
 <link rel="icon" type="image/png" sizes="192x192"
-	href="/icon/android-icon-192x192.png">
+	href="icon/android-icon-192x192.png">
 <link rel="icon" type="image/png" sizes="32x32"
-	href="/icon/favicon-32x32.png">
+	href="icon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96"
-	href="/icon/favicon-96x96.png">
+	href="icon/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16"
-	href="/icon/favicon-16x16.png">
-<link rel="manifest" href="/icon/manifest.json">
+	href="icon/favicon-16x16.png">
+<link rel="manifest" href="icon/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/icon/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <!-- ############### ICON ########### -->
 
@@ -51,6 +51,7 @@
      -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+<link href="css/sticky-footer-navbar.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -66,7 +67,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<a href="#" class="navbar-left"><img
-					src="icon/android-icon-36x36.png"></a>
+					src="icon/android-icon-48x48.png"></a>
 				<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
 					aria-controls="navbar">
@@ -74,7 +75,10 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">prEvent</a>
+				<a class="navbar-brand" href="#">
+				<span style="color:#F0145A;float:left; display: inline;">pr</span>
+				<span style="color:#004B92;float:left; display: inline;">Event</span>
+			</a>
 			</div>
 			<!-- 
 			<div id="navbar" class="collapse navbar-collapse">
@@ -101,109 +105,149 @@
  -->
 
 		<form id="eventForm" name="eventForm">
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Hallo, wir sind</h3>
-  </div>
-  <div class="panel-body">
-
-			<div class="form-group" id="g_wer">
-				<select
-					class="form-control" id="i_wer">
-					<option>...</option>
-					<option>ein Sportverein</option>
-					<option>ein Musikverein</option>
-					<option>ein Verein</option>
-					<option>eine Partei</option>
-					<option>eine Gemeinde</option>
-
-
-				</select>
-			</div>
-
-			<div class="form-group" id="g_wasGrob" style="display: none;">
-				<label for="i_wasGrob">und wir wollen</label> <select
-					class="form-control" id="i_wasGrob">
-					<option>...</option>
-					<option>eine Veranstaltung im Freien</option>
-					<option>eine Veranstaltung in einem Gebäude</option>
-
-
-				</select> <label> versichern.</label>
-
-			</div>
-
-
-			<div class="form-group" id="g_wasGenau" style="display: none;">
-				<label for="i_wasGenau">Dabei geht es um</label> <select
-					class="form-control" id="i_wasGenau">
-					<option>...</option>
-					<option>ein Konzert</option>
-					<option>ein Sportturnier</option>
-					<option>eine Aufführung</option>
-					<option>eine Ausstellung</option>
-					<option>einen Umzug</option>
-					<option>ein Velorennen</option>
-					<option>ein Bondagettreffen</option>
-				</select>
-			</div>
-
-			<div class="form-group" id="g_wann" style="display: none;">
-				<label for="i_wann">Die Veranstaltung steigt</label> <select
-					class="form-control" id="i_wann">
-					<option>...</option>
-					<option>am</option>
-					<option>vom</option>
-				</select>
-			</div>
-
-			<div class="form-group" id="g_von" style="display: none;">
-				<div class='input-group date' id='i_von'>
-					<input type='text' class="form-control" data-future="1" /> <span
-						class="input-group-addon"> <span
-						class="glyphicon glyphicon-calendar"></span>
-					</span>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Hallo, wir sind</h3>
 				</div>
-				<div class="help-block with-errors"></div>
-			</div>
+				<div class="panel-body">
 
-			<div class="form-group" id="g_bis" style="display: none;">
-				<label for="i_bis">bis</label>
-				<div class='input-group date' id='i_bis'>
-					<input type='text' class="form-control" data-duration="10" /> <span
-						class="input-group-addon"> <span
-						class="glyphicon glyphicon-calendar"></span>
-					</span>
-				</div>
-				<div class="help-block with-errors"></div>
-			</div>
-
-			<div class="form-group" id="g_teilnehmer" style="display: none;" >
-				<label for="i_teilnehmer">Wir erwarten</label> <select
-					class="form-control" id="i_teilnehmer">
-					<option>...</option>
-					<option>bis zu 20</option>
-					<option>20 bis 50</option>
-					<option>50 bis 100</option>
-					<option>100 bis 500</option>
-					<option>mehr als 500</option>
-				</select>
-				<label id="proTag">Personen.</label>
-			</div>
+					<div class="form-group" id="g_wer">
+						<select class="form-control" id="i_wer">
+							<option>...</option>
+							<option>ein Sportverein</option>
+							<option>ein Musikverein</option>
+							<option>ein Verein</option>
+							<option>eine Bikergang</option>
+							<option>eine Gemeinde</option>
 
 
-			<!-- 
+						</select>
+					</div>
+
+					<div class="form-group" id="g_wasGenau" style="display: none;">
+						<label for="i_wasGenau">und wollen</label> <select
+							class="form-control" id="i_wasGenau">
+							<option>...</option>
+							<option>ein Konzert</option>
+							<option>ein Sportturnier</option>
+							<option>eine Aufführung</option>
+							<option>eine Ausstellung</option>
+							<option>einen Umzug</option>
+							<option>ein Velorennen</option>
+							<option>ein Bondagettreffen</option>
+						</select>
+					</div>
+
+
+					<div class="form-group" id="g_wasGrob" style="display: none;">
+						<select class="form-control" id="i_wasGrob">
+							<option>...</option>
+							<option>im Freien</option>
+							<option>in einem Gebäude</option>
+							<option>teils im Freien, teils in einem Gebäude</option>
+						</select> <label> versichern.</label>
+
+					</div>
+
+
+
+
+					<div class="form-group" id="g_wann" style="display: none;">
+						<label for="i_wann">Die Veranstaltung steigt</label> <select
+							class="form-control" id="i_wann">
+							<option>...</option>
+							<option>am</option>
+							<option>vom</option>
+						</select>
+					</div>
+
+					<div class="form-group" id="g_von" style="display: none;">
+						<div class='input-group date' id='i_von'>
+							<input type='text' class="form-control" data-future="1" /> <span
+								class="input-group-addon"> <span
+								class="glyphicon glyphicon-calendar"></span>
+							</span>
+						</div>
+						<div class="help-block with-errors"></div>
+					</div>
+
+					<div class="form-group" id="g_bis" style="display: none;">
+						<label for="i_bis">bis</label>
+						<div class='input-group date' id='i_bis'>
+							<input type='text' class="form-control" data-duration="10" /> <span
+								class="input-group-addon"> <span
+								class="glyphicon glyphicon-calendar"></span>
+							</span>
+						</div>
+						<div class="help-block with-errors"></div>
+					</div>
+
+					<div class="form-group" id="g_teilnehmer" style="display: none;">
+						<label for="i_teilnehmer">Wir erwarten</label> <select
+							class="form-control" id="i_teilnehmer">
+							<option>...</option>
+							<option>bis zu 20</option>
+							<option>20 bis 50</option>
+							<option>50 bis 100</option>
+							<option>100 bis 500</option>
+							<option>mehr als 500</option>
+						</select> <label id="proTag">Teilnehmer.</label>
+					</div>
+
+
+					<!-- 
   <button type="submit" class="btn btn-primary">Submit</button>
    -->
-     </div>
-</div>
-   
+				</div>
+			</div>
+
+			<div class="panel panel-default" id="p_haftpflicht"
+				style="display: none;">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<input type="checkbox" id="i_haftpflicht" value=""> Wir
+						brauchen eine Haftpflichtversicherung
+					</h3>
+
+				</div>
+				<div class="panel-body" id="pb_haftpflicht" style="display: none;">
+					<input type="checkbox" id="i_essen" value=""> <label
+						for="i_essen">Wir bieten Essen oder Getränke an</label><br /> <input
+						type="checkbox" id="i_essen" value=""> <label
+						for="i_tribuene">Wir haben eine Zuschauertribüne oder
+						etwas ähnliches</label><br /> <input type="checkbox" id="i_essen" value="">
+					<label for="i_zelt">Wir haben ein Festzelt</label>
+
+				</div>
+			</div>
+
+			<div class="panel panel-default" id="p_inventar"
+				style="display: none;">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						<input type="checkbox" id="i_inventar" value=""> Wir
+						wollen unser Inventar versichern <a href="#" data-toggle="popover"
+							title="Inventar ist z.B."
+							data-content="ein Festzelt, Bänke, Tische, Stühle, Geschirr, Küchengeräte, Beleuchtung oder eine Musikanlage."><span
+							class="glyphicon glyphicon-question-sign"></span> </a>
+					</h3>
+
+				</div>
+				<div class="panel-body" id="pb_inventar" style="display: none;">
+					gugus</div>
+			</div>
+
 		</form>
 
 
 	</div>
 	<!-- /.container -->
 
+	<footer class="footer" style="display: none;">
+		<div class="container">
+			<p>Place sticky footer content here.</p>
+		</div>
+	</footer>
 
 
 
